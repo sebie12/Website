@@ -1,0 +1,60 @@
+ .fm-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--fm-height, 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fm-bg, #ffffff);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    z-index: 9999;
+    padding: 0 16px;
+    -webkit-tap-highlight-color: transparent;
+ }
+
+ .fm-inner {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .fm-item {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #111;
+    transition: background-color 120ms, transform 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .fm-item--hover,
+ .fm-item:hover,
+ .fm-item:focus {
+    background: rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+    outline: none;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+    .fm-item {
+      transition: none;
+    }
+    .fm-item--hover,
+    .fm-item:hover,
+    .fm-item:focus {
+      transform: none;
+    }
+ }
